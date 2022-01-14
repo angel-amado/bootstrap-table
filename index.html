@@ -18,7 +18,16 @@
 <body>
   <h1>Estadísticas Covid</h1>
 
-  <table data-toggle="table">
+  <table data-toggle="table" data-url="https://corona.lmao.ninja/v3/covid-19/countries/spain,france,portugal,ireland"
+  data-show-export="true">
+    <thead>
+      <tr>
+        <th data-field="country">País</th>
+        <th data-field="population">Población Total</th>
+        <th data-field="casesPerOneMillion" data-sortable="true">Casos por millón de habitantes</th>
+        <th data-field="updated" data-formatter="dateFormatter">Fecha última actualización</th>
+      </tr>
+    </thead>
   </table>
 
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
@@ -27,6 +36,13 @@
     integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
     crossorigin="anonymous"></script>
   <script src="https://unpkg.com/bootstrap-table@1.19.1/dist/bootstrap-table.min.js"></script>
+  <script>
+    function dateFormatter(value){
+      let dateFixed = new Date(value);
+      return dateFixed;
+    }
+
+  </script>
 
 </body>
 
